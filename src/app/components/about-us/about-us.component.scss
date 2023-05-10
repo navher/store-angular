@@ -1,0 +1,41 @@
+@import './../../../variables';
+.container-about{
+    margin-top: 100px;
+    .about-us {
+        
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        
+        .about-image {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        }
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;            
+            padding: 20px 40px;
+        
+        h2 {
+            font-size: 30;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        p {
+            font-size: 15px;
+            line-height: 25px;
+            margin-bottom: 20px;
+        }
+    }
+    }
+
+}

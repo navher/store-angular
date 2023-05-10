@@ -1,0 +1,17 @@
+@import './../../../variables';
+
+.category-container {
+    h2{
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+    .categories{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .selected {
+        border: 2px solid red;
+    }
+}

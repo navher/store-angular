@@ -1,0 +1,9 @@
+<div class="card category" *ngIf="category" (click)="selectCategory(category.getId())">
+    <div class="category-image">
+        <img src="{{category.getImage()}}" 
+            class="card-img-top" alt="{{category.getName()}}" [ngClass]="{'selected': category.isSelected()}">
+    </div>
+    <div class="card-body">
+        <h6 class="card-title text-center" [ngClass]="{'active': category.isSelected()}">{{category.getName()}}</h6>
+    </div>
+</div>

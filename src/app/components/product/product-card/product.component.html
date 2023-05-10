@@ -1,0 +1,11 @@
+<a class="card product" *ngIf="product" [routerLink]="['/productos', product.getId()]" >
+    <button class="favorite" [ngClass]="{'ckecked-favorite': product.isFavorite(), 'unckecked-favorite': !product.isFavorite()}"></button>
+    <img src="{{product.getImage()}}" class=" card-img card-img-top" alt="{{product.getName()}}">
+    <div class="card-body text-center">
+        <h5 class="card-title">{{product.getName()}}</h5>
+        <div class="price-content">
+            <p class="card-text product-text price" [ngClass]="{'with-discount': product.getDiscountPrice() != null}">{{product.getPrice()| currency:'EUR':'symbol':'1.2-2':'es' }}</p>
+            <p class="card-text product-text discount">{{product.getDiscountPrice()| currency:'EUR':'symbol':'1.2-2':'es'}}</p>
+        </div>
+    </div>
+</a>

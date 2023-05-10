@@ -1,0 +1,10 @@
+<div class="col m-0" *ngIf="target">
+    <div class="card target">
+        <img src="{{target.getImage()}}" class="card-img" alt="...">
+        <div class="card-img-overlay target-content">
+            <div>
+                <h5 class="card-title">{{target?.getTitle()}}</h5>
+                <p class="card-text">Ver más</p>
+            </div>
+        </div>
+</div>

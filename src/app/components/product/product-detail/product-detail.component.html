@@ -1,0 +1,39 @@
+<div class=" container-fluid container-product-detail">
+    <div class="product">
+        <div class="product-image">
+            <img src="{{product?.image}}" class="card-img-top" alt="{{product?.name}}">
+        </div>
+        <div class="product-content">
+            <h2>{{product?.name}}</h2>
+            <div class="price-content">
+                <p class="card-text product-text price" [ngClass]="{'with-discount': product?.discountPrice != null}">{{product?.price| currency:'EUR':'symbol':'1.2-2':'es' }}</p>
+                <p class="card-text product-text discount">{{product?.discountPrice| currency:'EUR':'symbol':'1.2-2':'es'}}</p>
+            </div>
+            <div class="miniature">
+                <p class="title">Color:</p>
+                <div class="image-miniature">
+                    <img src="{{product?.image}}" class="card-img-top" alt="{{product?.name}}">
+                </div>
+            </div>
+
+            <div class="content-sizes" *ngIf="product?.sizes != null">
+                <p class="title">Tallas: <span>Selecciona una talla</span></p>
+                <div class="sizes">
+                    <div class="size" *ngFor="let sizeItem of allSizes" [ngClass]="{'stock': product?.sizes?.includes(sizeItem), 'out-stock': !product?.sizes?.includes(sizeItem)}"> 
+                        <p>{{sizeItem}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--<button type="button" class="btn btn-primary btn-sm btn-wishlist"><i class="far fa-heart me-2"></i>Lista de favoritos</button>-->
+            <button type="button" class="btn btn-primary btn-sm btn-wishlist" [ngClass]="{'ckecked-favorite': product?.favorite, 'unckecked-favorite': !product?.favorite}"> Favoritos</button>
+
+            <div class="social-media">
+                <p class="title">Compartir:</p>
+                <div class="icon-background"><i class="fab fa-twitter"></i></div>
+                <div class="icon-background"><i class="fab fa-facebook-f"></i></div>
+                <div class="icon-background"><i class="fab fa-instagram"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
