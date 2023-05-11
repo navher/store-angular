@@ -4,8 +4,6 @@
     <app-target *ngFor="let target of targets" [target]="target"></app-target>
 </div>
 
-
-<!-- CATEGORIAS -->
 <div class="category-container mx-3">
     <H2>Categorías</H2>
 
@@ -14,8 +12,6 @@
         <app-category (onCategorySelected)="getAllProductsOfCategory($event)" *ngFor="let category of categories" [category]="category"></app-category>
     </div>
 </div>
-
-<!-- PRODUCTOS -->
 
 <div class="container">
     <div class="row">

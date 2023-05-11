@@ -116,10 +116,12 @@
             .btn-wishlist{
                 margin-top: 20px;
                 padding: 10px 20px;
-                background-color: $black-color;
-                border: none;
+                background-color: $white-color;
+                border: 2px solid $primary-color;
                 border-radius: 6px;
+                color: $primary-color;
                 display: block;
+                font-weight: 500;
             }
             .unckecked-favorite{
                 &::before{
